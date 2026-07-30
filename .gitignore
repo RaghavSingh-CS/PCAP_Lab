@@ -1,0 +1,16 @@
+cat > .gitignore <<'EOF'
+# Compiled executables named like w1q1, w1q2, etc.
+W*/w*q[0-9]*
+!W*/w*q[0-9]*.c
+
+# Other compiled files
+*.o
+*.out
+*.exe
+a.out
+
+# Editor temporary files
+*.swp
+*~
+EOF
+.vscode/
