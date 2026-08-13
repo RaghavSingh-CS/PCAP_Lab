@@ -1,16 +1,18 @@
-cat > .gitignore <<'EOF'
-# Compiled executables named like w1q1, w1q2, etc.
-W*/w*q[0-9]*
-!W*/w*q[0-9]*.c
-
-# Other compiled files
-*.o
-*.out
+*.zip
+*.docx
 *.exe
+*.o
 a.out
-
-# Editor temporary files
-*.swp
-*~
-EOF
 .vscode/
+
+# Ignore executable binary names
+w1q*
+w2q*
+w2a*
+w3q*
+w3a*
+
+# NEVER ignore source files or documents
+!*.c
+!*.pdf
+!*.md
