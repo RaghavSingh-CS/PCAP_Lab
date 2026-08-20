@@ -131,3 +131,36 @@ On Windows, the equivalent environment-variable syntax depends on the shell bein
 * Serial and parallel execution are compared wherever applicable.
 * Compiled executable files are excluded using `.gitignore`.
 
+
+## Week 4
+
+Contents:
+
+* Main Programs
+
+  * `w4q1.c` – Compute `pow(x, rank)` for each MPI process
+  * `w4q2.c` – Toggle a string character based on process rank
+  * `w4q3.c` – Factorial for even ranks and Fibonacci for odd ranks
+  * `w4q4.c` – Toggle a word using synchronous send (`MPI_Ssend`)
+  * `w4q5.c` – Master-to-slave communication using standard send (`MPI_Send`)
+  * `w4q6.c` – Circular/ring communication with value increment
+  * `w4q7.c` – Array distribution using buffered send (`MPI_Bsend`)
+
+* Additional Programs
+
+  * `W4_Additional/w4a1.c` – Reverse digits of array elements using multiple processes
+  * `W4_Additional/w4a2.c` – Check array elements for prime numbers using multiple processes
+
+* Lab instructions (`Lab 4_NE.pdf`)
+
+Topics covered:
+
+* MPI process initialization and termination
+* Process rank and communicator size
+* Point-to-point communication
+* Standard send and receive
+* Synchronous send
+* Buffered send
+* Message tags and communicators
+* Ring communication
+
