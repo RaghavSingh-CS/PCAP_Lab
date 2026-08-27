@@ -26,10 +26,8 @@ int main(int argc, char *argv[])
         for (int i = 0; i < size; i++)
             scanf("%d", &arr[i]);
 
-        // Root keeps its own element
         value = arr[0];
 
-        // Send one element to every other process
         for (int i = 1; i < size; i++)
         {
             MPI_Bsend(&arr[i], 1, MPI_INT,
