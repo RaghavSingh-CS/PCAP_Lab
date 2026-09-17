@@ -11,6 +11,9 @@ PCAP/
 ├── W3/
 ├── W4/
 ├── W5/
+├── W6/
+├── W7/
+├── W8/
 └── README.md
 ```
 
@@ -19,6 +22,9 @@ PCAP/
 * `W3/` – Week 3 OpenMP programs on data sharing, loop scheduling, and synchronization
 * `W4/` – Week 4 MPI programs on point-to-point communication
 * `W5/` – Week 5 MPI programs on collective communication
+* `W6/` – Week 6 MPI programs
+* `W7/` – Week 7 CUDA introduction
+* `W8/` – Week 8 CUDA programs and synchronization
 
 ---
 
@@ -175,6 +181,79 @@ PCAP/
 
 ---
 
+## Week 6
+
+### Main Programs
+
+* `w6q1.c` to `w6q4.c` – MPI laboratory exercises
+
+### Additional Programs
+
+* `w6a1.c` and `w6a2.c` – Additional MPI exercises
+
+### Lab Instructions
+
+* `Lab 6-NE.pdf`
+
+---
+
+## Week 7
+
+### Main Programs
+
+* `w7q1.cu` to `w7q4.cu` – CUDA introduction exercises
+
+### Additional Programs
+
+* `W7_Additional/w7a1.cu`
+* `W7_Additional/w7a2.cu`
+
+### Lab Instructions
+
+* `Lab 7 CUDA Introduction NE.pdf`
+
+### Topics Covered
+
+* CUDA programming model
+* Host and device execution
+* CUDA kernels
+* Thread and block indexing
+* Device memory allocation and data transfer
+* GPU execution
+
+---
+
+## Week 8
+
+### Main Programs
+
+* `w8q1.cu` – One-dimensional convolution
+* `w8q2.cu` – Parallel odd-even transposition sort
+* `w8q3.cu` – Parallel rank sort
+* `w8q4.cu` – Word occurrence counting using atomic operations
+* `w8q5.cu` – Parallel vowel replacement
+
+### Additional Programs
+
+* `W8_Additional/w8a1.cu` – Parallel string expansion
+* `W8_Additional/w8a2.cu` – Reverse each word in parallel
+* `W8_Additional/w8a3.cu` – Parallel string repetition
+
+### Lab Instructions
+
+* `Lab 8 CUDA Programs and Synchronization NE.pdf`
+
+### Topics Covered
+
+* One-dimensional convolution
+* Parallel sorting algorithms
+* CUDA atomic operations
+* Kernel execution timing
+* Parallel string processing
+* Thread synchronization
+
+---
+
 ## Compilation
 
 ### OpenMP Programs
@@ -219,11 +298,36 @@ mpirun -np 4 ./w5q1
 
 ---
 
+### CUDA Programs
+
+Compile a CUDA program using:
+
+```bash
+nvcc filename.cu -o output
+```
+
+For example:
+
+```bash
+nvcc w8q1.cu -o w8q1
+```
+
+Run using:
+
+```bash
+./w8q1
+```
+
+CUDA programs require a compatible NVIDIA GPU and CUDA runtime.
+
+---
+
 ## Notes
 
-* Programs are written in **C** using **OpenMP** and **MPI**.
+* Programs are written in **C** and **CUDA C** using **OpenMP**, **MPI**, and **CUDA**.
 * OpenMP is used for shared-memory parallel programming.
 * MPI is used for distributed-memory parallel programming.
+* CUDA is used for GPU-based parallel programming.
 * Execution time is measured using `omp_get_wtime()` where applicable.
 * Serial and parallel execution are compared wherever applicable.
 * Compiled executable files are excluded from version control.
