@@ -14,6 +14,7 @@ PCAP/
 ├── W6/
 ├── W7/
 ├── W8/
+├── W9/
 └── README.md
 ```
 
@@ -25,6 +26,7 @@ PCAP/
 * `W6/` – Week 6 MPI programs
 * `W7/` – Week 7 CUDA introduction
 * `W8/` – Week 8 CUDA programs and synchronization
+* `W9/` – Week 9 multidimensional CUDA programs
 
 ---
 
@@ -251,6 +253,72 @@ PCAP/
 * Kernel execution timing
 * Parallel string processing
 * Thread synchronization
+
+---
+
+
+## Week 9
+
+### Main Programs
+
+* `w9q1.cu` – Matrix addition using switch-case selection for row-wise, column-wise, and element-wise CUDA execution
+* `w9q2.cu` – Matrix multiplication using switch-case selection for row-wise, column-wise, and element-wise CUDA execution
+* `w9q3.cu` – Sparse matrix-vector multiplication using Compressed Sparse Row (CSR) representation
+* `w9q4.cu` – Matrix transformation using row-dependent powers
+
+### Additional Programs
+
+* `W9_Additional/w9a1.cu` – Replace even elements with row sums and odd elements with column sums
+* `W9_Additional/w9a2.cu` – Replace diagonal elements with zero, upper triangular elements with factorials, and lower triangular elements with digit sums
+* `W9_Additional/w9a3.cu` – Character matrix expansion using repetition counts from an integer matrix
+
+### Lab Instructions
+
+* `Lab 9 Multidimentional CUDA NE.pdf`
+
+### Topics Covered
+
+* Multidimensional CUDA thread and block indexing
+* One-dimensional and two-dimensional kernel configurations
+* Row-wise, column-wise, and element-wise parallelization
+* Matrix addition and multiplication
+* Sparse matrix storage using CSR
+* Sparse matrix-vector multiplication
+* Parallel matrix transformations
+* Host-device memory transfers
+* CUDA kernel selection using switch-case
+
+### Compilation and Execution
+
+Compile from the repository root:
+
+    nvcc W9/w9q1.cu -o W9/w9q1
+    nvcc W9/w9q2.cu -o W9/w9q2
+    nvcc W9/w9q3.cu -o W9/w9q3
+    nvcc W9/w9q4.cu -o W9/w9q4
+    nvcc W9/W9_Additional/w9a1.cu -o W9/W9_Additional/w9a1
+    nvcc W9/W9_Additional/w9a2.cu -o W9/W9_Additional/w9a2
+    nvcc W9/W9_Additional/w9a3.cu -o W9/W9_Additional/w9a3
+
+Execute using:
+
+    ./W9/w9q1
+    ./W9/w9q2
+    ./W9/w9q3
+    ./W9/w9q4
+    ./W9/W9_Additional/w9a1
+    ./W9/W9_Additional/w9a2
+    ./W9/W9_Additional/w9a3
+
+### Input Specifications
+
+* Q1: M, N, two matrices, and execution choice (1–3)
+* Q2: M, K, N, two compatible matrices, and execution choice (1–3)
+* Q3: Matrix dimensions, sparse matrix, and input vector
+* Q4: Matrix dimensions and elements
+* Additional Q1: Matrix dimensions and elements
+* Additional Q2: Square matrix order and elements
+* Additional Q3: Matrix dimensions, character matrix, and repetition counts
 
 ---
 
